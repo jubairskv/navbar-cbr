@@ -21,6 +21,7 @@ const Header = () => {
             <div className="header-container">
                 <ul className={menuOpen ? "show" : ""}>
                     <li>
+                        {/* <a href="/" className="active">Home</a> */}
                         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
                     </li>
                     <li>
