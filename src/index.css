@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.body-container {
+/* .body-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,4 +67,118 @@ code {
 .user-icon{
   width: 40px;
   height: 40px;
+} */
+
+/* General Styles */
+.body-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  padding: 10px 20px;
 }
+
+.logo-container h3 {
+  margin: 0;
+}
+
+.header-container ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container ul li {
+  padding: 0 20px;
+  position: relative;
+}
+
+.header-container li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.header-container li a:hover,
+.header-container li a.active {
+  color: burlywood;
+}
+
+.header-container li a:hover::after,
+.header-container li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: burlywood;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.bell-container {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.bell-icon {
+  margin-right: 20px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header-container ul  {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: aqua;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .header-container ul li {
+    padding: 10px 20px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+  }
+ 
+  .bell-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  .bell-icon {
+    margin: 0 0 10px 20px;
+  }
+  .user-icon {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  #menu {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container ul.show {
+    display: flex;
+  }
+}
+
